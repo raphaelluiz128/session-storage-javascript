@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEU TRABALHO DE HTML</title>
+    <meta charset="utf-8"/>
+    <link href="VisualFormulario.css" rel="stylesheet" media="all" />
+
+   	<!--<script type=”text/JavaScript.js”> </script>
+-->
+<script type="text/javascript">
+	function Enviar() {
+
+	    var nome = document.getElementById("nomeid").value;
+	    var tel = document.getElementById("telid").value;
+
+	    if (nome.value != "") {
+	        alert('Seus dados foram salvos ');
+	    }
+
+	    sessionStorage.setItem('nomeid', nome);
+	    sessionStorage.setItem('telid', tel);
+	    window.location.href = "Formulario2.html";
+	}
+
+    function Limpar() {
+
+    	document.getElementById("emailid").value = "";
+
+	}
+
+</script>
+</head>
+
+<body>
+	<form name="meu_form">
+
+        <h1>FORMULARIO</h1>
+
+        <p class="nome">
+            <input type="text" id="nomeid" placeholder="Digite um nome" required="required" name="nome" />
+            <label for="nome">Nome</label>
+        </p>
+
+        <p class="tel">
+            <input type="text" id="telid" placeholder="(xx)xx-xx-xx-xx" name="tel" />
+            <label for="tel">Tel</label>
+
+        </p>
+
+        <p>
+            <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+            <label for="email">Email</label>
+        </p>
+       
+
+       	<p>
+       		<button type="button" onclick="Enviar();">Enviar</button>    
+	    </p>
+
+	    <p>
+	        <button type="button" onclick="Limpar();">Limpar</button>
+	    </p>
+        	
+    </form>
+</body>
+
+</html>

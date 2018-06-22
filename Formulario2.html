@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEU TRABALHO DE HTML pagina 2</title>
+    <meta charset="utf-8"/>
+    <link href="VisualFormulario.css" rel="stylesheet" media="all" />
+    
+</head>
+
+<body>
+    <div id="resultado">
+
+    </div>
+	
+
+     <input type="text" id="campoNome";/>
+     <label for="nome">Nome</label><br><br>
+     <button type="button" onclick="Gravar();">Gravar</button>
+
+     <div id="colecaoNomes">
+        
+
+     </div>
+
+
+
+</body>
+<script type="text/javascript">
+    
+        var nome = sessionStorage.getItem('nomeid');
+        var tel = sessionStorage.getItem('telid');
+        document.getElementById('resultado').innerHTML = nome + "<br/>" + tel;
+
+        
+
+        function Gravar() {
+            
+            vetor = new Array (); //declaro o vetor
+            var texto = document.getElementById('campoNome').value; //pego o valor do campo de texto
+
+            vetor.push(texto); //uso essa função para adicionar no final do array
+            
+            for (var i = 0; i < vetor.length; i++){
+
+                document.getElementById('colecaoNomes').innerHTML += vetor[i] + "<br/>"
+            }    
+            //o for para listar o array
+    
+            
+         }
+         
+
+</script>
+</html>
